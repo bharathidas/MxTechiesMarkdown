@@ -1,0 +1,376 @@
+.widget-markdown {
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.widget-markdown > :first-child {
+    margin-top: 0;
+}
+
+.widget-markdown > :last-child {
+    margin-bottom: 0;
+}
+
+.widget-markdown-placeholder {
+    color: #6c717e;
+    font-style: italic;
+}
+
+.widget-markdown h1,
+.widget-markdown h2,
+.widget-markdown h3,
+.widget-markdown h4,
+.widget-markdown h5,
+.widget-markdown h6 {
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.widget-markdown p,
+.widget-markdown ul,
+.widget-markdown ol,
+.widget-markdown pre,
+.widget-markdown table,
+.widget-markdown blockquote {
+    margin: 0 0 1em;
+}
+
+.widget-markdown ul,
+.widget-markdown ol {
+    padding-left: 2em;
+}
+
+.widget-markdown li + li {
+    margin-top: 0.25em;
+}
+
+.widget-markdown li.task-list-item {
+    list-style: none;
+    margin-left: -1.5em;
+}
+
+.widget-markdown code {
+    padding: 0.15em 0.4em;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.widget-markdown pre {
+    padding: 1em;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+}
+
+.widget-markdown pre code {
+    padding: 0;
+    background: none;
+    font-size: 0.9em;
+}
+
+.widget-markdown blockquote {
+    padding: 0.25em 1em;
+    color: #6c717e;
+    border-left: 4px solid #d7d9dd;
+}
+
+.widget-markdown table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+.widget-markdown th,
+.widget-markdown td {
+    padding: 0.4em 0.8em;
+    border: 1px solid #d7d9dd;
+}
+
+.widget-markdown th {
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.widget-markdown img {
+    max-width: 100%;
+    height: auto;
+}
+
+.widget-markdown hr {
+    border: 0;
+    border-top: 1px solid #d7d9dd;
+    margin: 1.5em 0;
+}
+
+/* Editor mode */
+
+.widget-markdown-editor-panes {
+    display: flex;
+    gap: 12px;
+}
+
+.widget-markdown-editor-sideBySide .widget-markdown-editor-panes {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.widget-markdown-editor-stacked .widget-markdown-editor-panes {
+    flex-direction: column;
+}
+
+.widget-markdown-editor-sideBySide .widget-markdown-editor-input,
+.widget-markdown-editor-sideBySide .widget-markdown-preview {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.widget-markdown-editor-input {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Toolbar sits on top of the textarea as one framed control */
+
+.widget-markdown-editor .widget-markdown-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 0;
+    padding: 3px 4px;
+    border: 1px solid #ced0d3;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #f5f6f6;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-group + .widget-markdown-toolbar-group::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 16px;
+    margin: 0 4px;
+    background-color: #d7d9dd;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    color: #4d5361;
+    line-height: 1;
+    font-size: 0;
+    cursor: pointer;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-button svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-button:hover:not(:disabled) {
+    background-color: #e4e6e9;
+    color: #1f2633;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-button:active:not(:disabled) {
+    background-color: #d8dbe0;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-button:focus {
+    outline: none;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-button:focus-visible {
+    outline: 2px solid #264ae5;
+    outline-offset: -2px;
+}
+
+.widget-markdown-editor .widget-markdown-toolbar-button:disabled {
+    color: #b3b7bf;
+    cursor: default;
+}
+
+.widget-markdown-editor .widget-markdown-textarea {
+    flex: 1 1 auto;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    resize: vertical;
+    height: auto;
+    tab-size: 4;
+    border-color: #ced0d3;
+}
+
+.widget-markdown-editor-input.has-toolbar .widget-markdown-textarea {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.widget-markdown-editor .widget-markdown-textarea:focus {
+    border-color: #264ae5;
+}
+
+.widget-markdown-editor-input.has-toolbar:focus-within .widget-markdown-toolbar {
+    border-color: #264ae5;
+}
+
+.widget-markdown-preview {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border: 1px solid #ced0d3;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.widget-markdown-preview-header {
+    flex: 0 0 auto;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4d5361;
+    background-color: #f5f6f6;
+    border-bottom: 1px solid #ced0d3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.widget-markdown-preview-body {
+    flex: 1 1 auto;
+    padding: 8px 12px;
+    overflow: auto;
+}
+
+.widget-markdown-editor-sideBySide .widget-markdown-preview {
+    max-height: 70vh;
+}
+
+.widget-markdown-editor-stacked .widget-markdown-preview-body {
+    max-height: 60vh;
+}
+
+.widget-markdown-editor.has-error .widget-markdown-textarea,
+.widget-markdown-editor.has-error .widget-markdown-toolbar {
+    border-color: #d64d4d;
+}
+
+.widget-markdown-editor .mx-validation-message {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .widget-markdown-editor-sideBySide .widget-markdown-editor-panes {
+        flex-direction: column;
+    }
+}
+
+/* Preview button (popup layout) */
+
+.widget-markdown-editor .widget-markdown-toolbar-preview {
+    order: 99;
+    width: auto;
+    margin-left: auto;
+    padding: 0 8px 0 6px;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Preview dialog */
+
+.widget-markdown-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(15, 23, 42, 0.45);
+}
+
+.widget-markdown-dialog {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    max-height: 85vh;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.widget-markdown-dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e4e8;
+}
+
+.widget-markdown-dialog-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2633;
+}
+
+.widget-markdown-dialog-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: #4d5361;
+    cursor: pointer;
+}
+
+.widget-markdown-dialog-close:hover {
+    background-color: #e4e6e9;
+    color: #1f2633;
+}
+
+.widget-markdown-dialog-close:focus-visible {
+    outline: 2px solid #264ae5;
+    outline-offset: -2px;
+}
+
+.widget-markdown-dialog-body {
+    padding: 16px 20px;
+    overflow: auto;
+}

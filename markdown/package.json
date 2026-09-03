@@ -1,0 +1,35 @@
+{
+  "name": "markdown",
+  "widgetName": "Markdown",
+  "version": "1.0.0",
+  "description": "Renders Markdown content using react-markdown",
+  "copyright": "2026 MX Techies",
+  "author": "Bharathidasan S",
+  "license": "Apache-2.0",
+  "private": true,
+  "config": {
+    "projectPath": "../",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mxtechies",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^11.13.0"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "overrides": {
+    "zip-a-folder": "6.1.4"
+  }
+}

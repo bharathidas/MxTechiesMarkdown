@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mxtechies.markdown.Markdown" pluginWidget="true" needsEntityContext="false" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Markdown</name>
+    <description>Renders Markdown text as HTML using react-markdown, optionally with an editor and live preview.</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="Content">
+                <property key="mode" type="enumeration" defaultValue="view">
+                    <caption>Mode</caption>
+                    <description>View renders Markdown from an expression. Edit shows a textarea bound to an attribute with a live preview.</description>
+                    <enumerationValues>
+                        <enumerationValue key="view">View</enumerationValue>
+                        <enumerationValue key="edit">Edit</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <property key="content" type="expression" required="false">
+                    <caption>Markdown</caption>
+                    <description>The Markdown source to render, e.g. an attribute ($currentObject/Body) or a string literal.</description>
+                    <returnType type="String" />
+                </property>
+                <property key="markdownAttribute" type="attribute" required="false">
+                    <caption>Markdown attribute</caption>
+                    <description>String attribute that holds the Markdown source. The editor writes changes back to it.</description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+                <property key="emptyText" type="textTemplate" required="false">
+                    <caption>Empty text</caption>
+                    <description>Shown in the preview when the Markdown value is empty or unavailable.</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Rendering">
+                <property key="gfm" type="boolean" defaultValue="true">
+                    <caption>GitHub Flavored Markdown</caption>
+                    <description>Enables tables, task lists, strikethrough, footnotes and autolinks (remark-gfm).</description>
+                </property>
+                <property key="htmlHandling" type="enumeration" defaultValue="text">
+                    <caption>Inline HTML</caption>
+                    <description>Raw HTML in the Markdown is never executed. Choose whether to show it as plain text or drop it.</description>
+                    <enumerationValues>
+                        <enumerationValue key="text">Show as text</enumerationValue>
+                        <enumerationValue key="skip">Remove</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <property key="linkTarget" type="enumeration" defaultValue="blank">
+                    <caption>Open links in</caption>
+                    <description/>
+                    <enumerationValues>
+                        <enumerationValue key="blank">New tab</enumerationValue>
+                        <enumerationValue key="self">Same tab</enumerationValue>
+                    </enumerationValues>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Editor">
+            <propertyGroup caption="Layout">
+                <property key="showToolbar" type="boolean" defaultValue="true">
+                    <caption>Show toolbar</caption>
+                    <description>Formatting buttons for bold, italic, headings, lists, links, tables and more. Also enables Ctrl+B, Ctrl+I and Ctrl+K.</description>
+                </property>
+                <property key="editorLayout" type="enumeration" defaultValue="popup">
+                    <caption>Preview position</caption>
+                    <description/>
+                    <enumerationValues>
+                        <enumerationValue key="popup">In a popup (Preview button in the toolbar)</enumerationValue>
+                        <enumerationValue key="sideBySide">Next to the editor</enumerationValue>
+                        <enumerationValue key="stacked">Below the editor</enumerationValue>
+                        <enumerationValue key="hidden">No preview</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <property key="showPreviewTitle" type="boolean" defaultValue="true">
+                    <caption>Show preview title</caption>
+                    <description>Shows a header above the inline preview.</description>
+                </property>
+                <property key="previewTitle" type="textTemplate" required="false">
+                    <caption>Preview title</caption>
+                    <description>Header text for the preview pane and the popup dialog. Defaults to "Preview".</description>
+                    <translations>
+                        <translation lang="en_US">Preview</translation>
+                    </translations>
+                </property>
+                <property key="editorRows" type="integer" defaultValue="12">
+                    <caption>Editor rows</caption>
+                    <description>Initial height of the textarea in text rows.</description>
+                </property>
+                <property key="placeholder" type="textTemplate" required="false">
+                    <caption>Placeholder</caption>
+                    <description>Hint shown in the empty textarea.</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Events">
+                <property key="onChange" type="action" required="false">
+                    <caption>On change</caption>
+                    <description>Executed when the editor loses focus after the text was changed.</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>

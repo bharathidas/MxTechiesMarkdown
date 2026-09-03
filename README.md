@@ -30,18 +30,4 @@ next to the editor, below it, or in a popup.
    - View mode: set **Markdown** to an expression such as `$currentObject/Body`.
    - Edit mode: pick a String attribute; the toolbar and Preview button appear.
 
-## Building from source
-
-```bash
-cd markdown
-npm install
-npm run build      # dev build into ../widgets
-npm run release    # minified build into markdown/dist/<version>
-```
-
-Requires Node.js 22 and npm. See [`markdown/README.md`](markdown/README.md)
-for all properties and details.
-
-## License
-
-Apache License 2.0. See [LICENSE](LICENSE).
+See [`markdown/README.md`](markdown/README.md) for all properties and details.

@@ -2,9 +2,9 @@ import { ReactElement, useCallback } from "react";
 import classNames from "classnames";
 import { ValueStatus } from "mendix";
 
-import { MarkdownContainerProps } from "../typings/MarkdownProps";
+import { MarkdownEditorContainerProps } from "../typings/MarkdownEditorProps";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
-import { MarkdownEditor } from "./components/MarkdownEditor";
+import { EditorPane } from "./components/EditorPane";
 
 import "./ui/Markdown.css";
 
@@ -12,7 +12,7 @@ function available(value: { status: ValueStatus; value?: string } | undefined): 
     return value && value.status === ValueStatus.Available ? value.value ?? "" : "";
 }
 
-export function Markdown(props: MarkdownContainerProps): ReactElement {
+export function MarkdownEditor(props: MarkdownEditorContainerProps): ReactElement {
     const {
         mode,
         content,
@@ -63,7 +63,7 @@ export function Markdown(props: MarkdownContainerProps): ReactElement {
 
         return (
             <div className={classNames("widget-markdown-container", className)} style={style} tabIndex={tabIndex}>
-                <MarkdownEditor
+                <EditorPane
                     id={name}
                     value={source}
                     onChange={handleChange}

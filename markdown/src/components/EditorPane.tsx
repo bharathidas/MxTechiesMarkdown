@@ -7,7 +7,7 @@ import { FormatId, Selection, applyFormat } from "./formatting";
 
 export type EditorLayout = "sideBySide" | "stacked" | "popup" | "hidden";
 
-export interface MarkdownEditorProps extends Omit<MarkdownRendererProps, "source"> {
+export interface EditorPaneProps extends Omit<MarkdownRendererProps, "source"> {
     value: string;
     onChange: (value: string) => void;
     onCommit?: () => void;
@@ -25,7 +25,7 @@ export interface MarkdownEditorProps extends Omit<MarkdownRendererProps, "source
     id?: string;
 }
 
-export function MarkdownEditor(props: MarkdownEditorProps): ReactElement {
+export function EditorPane(props: EditorPaneProps): ReactElement {
     const {
         value,
         onChange,

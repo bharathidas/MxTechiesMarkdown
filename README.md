@@ -76,7 +76,7 @@ Version 1.0.0 · Mendix Studio Pro 11.12.1 and higher · Web
 
 ## Installation
 
-1. Download `mxtechies.Markdown.mpk` from the
+1. Download `mxtechies.MarkdownEditor.mpk` from the
    [latest release](https://github.com/bharathidas/Markdown/releases/latest)
    and copy it into your app's `widgets` folder, or in Studio Pro use
    **App Explorer > Import module package**.
@@ -196,7 +196,7 @@ request at runtime, and the widget is marked offline capable.
 ## Repository layout
 
 - [`markdown/`](markdown/) holds the widget source.
-- `widgets/mxtechies.Markdown.mpk` is the prebuilt package.
+- `widgets/mxtechies.MarkdownEditor.mpk` is the prebuilt package.
 - The rest of the repository is the Mendix test app
   (`PlugableWidget_Markdown.mpr`) used to develop and try the widget.
 

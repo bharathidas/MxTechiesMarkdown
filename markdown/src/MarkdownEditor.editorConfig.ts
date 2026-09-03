@@ -1,4 +1,4 @@
-import { MarkdownPreviewProps } from "../typings/MarkdownProps";
+import { MarkdownEditorPreviewProps } from "../typings/MarkdownEditorProps";
 
 export type Properties = PropertyGroup[];
 
@@ -112,7 +112,7 @@ function hideGroups(groups: PropertyGroup[], captions: string[]): PropertyGroup[
     return groups.filter(group => !captions.includes(group.caption));
 }
 
-export function getProperties(values: MarkdownPreviewProps, defaultProperties: Properties): Properties {
+export function getProperties(values: MarkdownEditorPreviewProps, defaultProperties: Properties): Properties {
     if (values.mode === "edit") {
         const hidden = ["content"];
         if (values.editorLayout === "hidden") {
@@ -129,7 +129,7 @@ export function getProperties(values: MarkdownPreviewProps, defaultProperties: P
     return hideGroups(defaultProperties, ["Editor"]);
 }
 
-export function check(values: MarkdownPreviewProps): Problem[] {
+export function check(values: MarkdownEditorPreviewProps): Problem[] {
     const problems: Problem[] = [];
     if (values.mode === "edit") {
         if (!values.markdownAttribute) {
@@ -156,7 +156,7 @@ export function check(values: MarkdownPreviewProps): Problem[] {
     return problems;
 }
 
-export function getPreview(values: MarkdownPreviewProps, isDarkMode: boolean): PreviewProps {
+export function getPreview(values: MarkdownEditorPreviewProps, isDarkMode: boolean): PreviewProps {
     const edit = values.mode === "edit";
     const detail = edit ? values.markdownAttribute || "(no attribute)" : values.content?.trim() || "(no content)";
     const title = isDarkMode ? "#DEDEDE" : "#2F3646";
@@ -225,7 +225,7 @@ export function getPreview(values: MarkdownPreviewProps, isDarkMode: boolean): P
     return { type: "RowLayout", columnSize: "grow", children: [editorPane, previewPane] };
 }
 
-export function getCustomCaption(values: MarkdownPreviewProps): string {
+export function getCustomCaption(values: MarkdownEditorPreviewProps): string {
     if (values.mode === "edit") {
         return values.markdownAttribute ? `Markdown editor: ${values.markdownAttribute}` : "Markdown editor";
     }

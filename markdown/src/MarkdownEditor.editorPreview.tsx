@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import { MarkdownPreviewProps } from "../typings/MarkdownProps";
+import { MarkdownEditorPreviewProps } from "../typings/MarkdownEditorProps";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
-import { MarkdownEditor } from "./components/MarkdownEditor";
+import { EditorPane } from "./components/EditorPane";
 
 const SAMPLE = [
     "# Markdown",
@@ -12,7 +12,7 @@ const SAMPLE = [
     "- Item two"
 ].join("\n");
 
-export function preview(props: MarkdownPreviewProps): ReactElement {
+export function preview(props: MarkdownEditorPreviewProps): ReactElement {
     const rendererProps = {
         gfm: props.gfm,
         skipHtml: props.htmlHandling === "skip",
@@ -23,7 +23,7 @@ export function preview(props: MarkdownPreviewProps): ReactElement {
         const attribute = (props.markdownAttribute ?? "").trim();
         return (
             <div className={`widget-markdown-container ${props.class ?? ""}`} style={props.styleObject}>
-                <MarkdownEditor
+                <EditorPane
                     value={SAMPLE}
                     onChange={() => undefined}
                     readOnly

@@ -25,6 +25,15 @@ executed, so untrusted content is safe to display.
 - Standard Mendix class and style properties; all rendered output is scoped
   under `.widget-markdown` for theming.
 
+## Screenshots
+
+| | |
+|---|---|
+| ![View mode](screenshots/Screenshot_1.png) View mode renders a Markdown attribute | ![Edit mode side by side](screenshots/Screenshot_2.png) Edit mode with toolbar and live preview next to the editor |
+| ![Popup preview](screenshots/Screenshot_3.png) Preview button opens the rendered Markdown in a popup | ![Stacked preview](screenshots/Screenshot_4.png) Preview below the editor with a custom title |
+| ![Safe by default](screenshots/Screenshot_5.png) HTML is never executed, unsafe links are stripped | ![General properties](screenshots/Screenshot_6.png) Studio Pro properties, General tab |
+| ![Editor properties](screenshots/Screenshot_7.png) Studio Pro properties, Editor tab | |
+
 ## Usage in Studio Pro
 
 1. Build the widget (see below) or take the prebuilt

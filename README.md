@@ -1,9 +1,20 @@
 # Markdown widget for Mendix
 
+![Markdown widget for Mendix](markdown/screenshots/cover.jpg)
+
 A pluggable web widget for Mendix 11 that renders Markdown with
 [react-markdown](https://www.npmjs.com/package/react-markdown) and, in edit
 mode, provides a Markdown editor with a formatting toolbar and a live preview
 next to the editor, below it, or in a popup.
+
+## Screenshots
+
+| | |
+|---|---|
+| ![View mode](markdown/screenshots/Screenshot_1.png) View mode renders a Markdown attribute | ![Edit mode side by side](markdown/screenshots/Screenshot_2.png) Edit mode with toolbar and live preview next to the editor |
+| ![Popup preview](markdown/screenshots/Screenshot_3.png) Preview button opens the rendered Markdown in a popup | ![Stacked preview](markdown/screenshots/Screenshot_4.png) Preview below the editor with a custom title |
+| ![Safe by default](markdown/screenshots/Screenshot_5.png) HTML is never executed, unsafe links are stripped | ![General properties](markdown/screenshots/Screenshot_6.png) Studio Pro properties, General tab |
+| ![Editor properties](markdown/screenshots/Screenshot_7.png) Studio Pro properties, Editor tab | |
 
 - Widget source and documentation: [`markdown/`](markdown/README.md)
 - Prebuilt package: `widgets/mxtechies.Markdown.mpk` and the

@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { MarkdownEditorPreviewProps } from "../typings/MarkdownEditorProps";
+import { MxTechiesMarkdownPreviewProps } from "../typings/MxTechiesMarkdownProps";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
 import { EditorPane } from "./components/EditorPane";
 
@@ -12,7 +12,7 @@ const SAMPLE = [
     "- Item two"
 ].join("\n");
 
-export function preview(props: MarkdownEditorPreviewProps): ReactElement {
+export function preview(props: MxTechiesMarkdownPreviewProps): ReactElement {
     const rendererProps = {
         gfm: props.gfm,
         skipHtml: props.htmlHandling === "skip",

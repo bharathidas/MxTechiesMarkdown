@@ -37,7 +37,7 @@ executed, so untrusted content is safe to display.
 ## Usage in Studio Pro
 
 1. Build the widget (see below) or take the prebuilt
-   `mxtechies.MarkdownEditor.mpk` from the app's `widgets` folder.
+   `mxtechies.MxTechiesMarkdown.mpk` from the app's `widgets` folder.
 2. In Studio Pro press **F4** (Synchronize App Directory).
 3. Drag **Markdown Editor** from the toolbox (Add-ons) onto a page inside a data view.
 4. For viewing, keep **Mode** on *View* and set **Markdown** to an expression
@@ -76,7 +76,7 @@ executed, so untrusted content is safe to display.
 ```bash
 cd markdown
 npm install
-npm run build     # writes ../widgets/mxtechies.MarkdownEditor.mpk (dev build)
+npm run build     # writes ../widgets/mxtechies.MxTechiesMarkdown.mpk (dev build)
 npm run dev       # rebuild on change while the app runs locally
 npm run release   # minified build in dist/<version>/, copy to ../widgets
 npm run lint      # ESLint + Prettier

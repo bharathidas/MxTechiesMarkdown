@@ -1,4 +1,4 @@
-import { MarkdownEditorPreviewProps } from "../typings/MarkdownEditorProps";
+import { MxTechiesMarkdownPreviewProps } from "../typings/MxTechiesMarkdownProps";
 
 export type Properties = PropertyGroup[];
 
@@ -112,7 +112,7 @@ function hideGroups(groups: PropertyGroup[], captions: string[]): PropertyGroup[
     return groups.filter(group => !captions.includes(group.caption));
 }
 
-export function getProperties(values: MarkdownEditorPreviewProps, defaultProperties: Properties): Properties {
+export function getProperties(values: MxTechiesMarkdownPreviewProps, defaultProperties: Properties): Properties {
     if (values.mode === "edit") {
         const hidden = ["content"];
         if (values.editorLayout === "hidden") {
@@ -129,7 +129,7 @@ export function getProperties(values: MarkdownEditorPreviewProps, defaultPropert
     return hideGroups(defaultProperties, ["Editor"]);
 }
 
-export function check(values: MarkdownEditorPreviewProps): Problem[] {
+export function check(values: MxTechiesMarkdownPreviewProps): Problem[] {
     const problems: Problem[] = [];
     if (values.mode === "edit") {
         if (!values.markdownAttribute) {
@@ -156,7 +156,7 @@ export function check(values: MarkdownEditorPreviewProps): Problem[] {
     return problems;
 }
 
-export function getPreview(values: MarkdownEditorPreviewProps, isDarkMode: boolean): PreviewProps {
+export function getPreview(values: MxTechiesMarkdownPreviewProps, isDarkMode: boolean): PreviewProps {
     const edit = values.mode === "edit";
     const detail = edit ? values.markdownAttribute || "(no attribute)" : values.content?.trim() || "(no content)";
     const title = isDarkMode ? "#DEDEDE" : "#2F3646";
@@ -225,7 +225,7 @@ export function getPreview(values: MarkdownEditorPreviewProps, isDarkMode: boole
     return { type: "RowLayout", columnSize: "grow", children: [editorPane, previewPane] };
 }
 
-export function getCustomCaption(values: MarkdownEditorPreviewProps): string {
+export function getCustomCaption(values: MxTechiesMarkdownPreviewProps): string {
     if (values.mode === "edit") {
         return values.markdownAttribute ? `Markdown Editor: ${values.markdownAttribute}` : "Markdown Editor";
     }

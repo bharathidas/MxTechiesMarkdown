@@ -1,6 +1,6 @@
 {
   "name": "markdown",
-  "widgetName": "MarkdownEditor",
+  "widgetName": "MxTechiesMarkdown",
   "version": "1.0.0",
   "description": "Renders Markdown content using react-markdown",
   "copyright": "2026 MX Techies",

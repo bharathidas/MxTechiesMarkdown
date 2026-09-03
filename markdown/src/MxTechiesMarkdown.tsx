@@ -2,7 +2,7 @@ import { ReactElement, useCallback } from "react";
 import classNames from "classnames";
 import { ValueStatus } from "mendix";
 
-import { MarkdownEditorContainerProps } from "../typings/MarkdownEditorProps";
+import { MxTechiesMarkdownContainerProps } from "../typings/MxTechiesMarkdownProps";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
 import { EditorPane } from "./components/EditorPane";
 
@@ -12,7 +12,7 @@ function available(value: { status: ValueStatus; value?: string } | undefined): 
     return value && value.status === ValueStatus.Available ? value.value ?? "" : "";
 }
 
-export function MarkdownEditor(props: MarkdownEditorContainerProps): ReactElement {
+export function MxTechiesMarkdown(props: MxTechiesMarkdownContainerProps): ReactElement {
     const {
         mode,
         content,

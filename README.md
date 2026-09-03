@@ -77,7 +77,7 @@ Version 1.0.0 · Mendix Studio Pro 11.12.1 and higher · Web
 ## Installation
 
 1. Download `mxtechies.MxTechiesMarkdown.mpk` from the
-   [latest release](https://github.com/bharathidas/Markdown/releases/latest)
+   [latest release](https://github.com/bharathidas/MxTechiesMarkdown/releases/latest)
    and copy it into your app's `widgets` folder, or in Studio Pro use
    **App Explorer > Import module package**.
 2. Press **F4** (Synchronize App Directory) to refresh the toolbox.
@@ -202,4 +202,4 @@ request at runtime, and the widget is marked offline capable.
 
 ## Issues, suggestions and feature requests
 
-https://github.com/bharathidas/Markdown/issues
+https://github.com/bharathidas/MxTechiesMarkdown/issues

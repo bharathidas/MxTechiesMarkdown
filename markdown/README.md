@@ -1,4 +1,4 @@
-# Markdown (Mendix pluggable widget)
+# Markdown Editor (Mendix pluggable widget)
 
 Renders Markdown text as HTML inside a Mendix page using
 [react-markdown](https://www.npmjs.com/package/react-markdown), and optionally
@@ -39,7 +39,7 @@ executed, so untrusted content is safe to display.
 1. Build the widget (see below) or take the prebuilt
    `mxtechies.MarkdownEditor.mpk` from the app's `widgets` folder.
 2. In Studio Pro press **F4** (Synchronize App Directory).
-3. Drag **Markdown** from the toolbox (Add-ons) onto a page inside a data view.
+3. Drag **Markdown Editor** from the toolbox (Add-ons) onto a page inside a data view.
 4. For viewing, keep **Mode** on *View* and set **Markdown** to an expression
    such as `$currentObject/Body`.
 5. For editing, set **Mode** to *Edit* and pick the **Markdown attribute**

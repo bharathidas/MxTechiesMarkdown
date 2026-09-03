@@ -179,7 +179,7 @@ export function getPreview(values: MarkdownEditorPreviewProps, isDarkMode: boole
             borderRadius: 4,
             padding: 8,
             backgroundColor: background,
-            children: [label("Markdown"), note(detail)]
+            children: [label("Markdown Editor"), note(detail)]
         };
     }
 
@@ -190,7 +190,7 @@ export function getPreview(values: MarkdownEditorPreviewProps, isDarkMode: boole
         borderRadius: 4,
         padding: 8,
         backgroundColor: isDarkMode ? "#2B2B2B" : "#FFFFFF",
-        children: [label("Markdown editor"), note(detail)]
+        children: [label("Markdown Editor"), note(detail)]
     };
     const previewPane: PreviewProps = {
         type: "Container",
@@ -216,7 +216,7 @@ export function getPreview(values: MarkdownEditorPreviewProps, isDarkMode: boole
             borderRadius: 4,
             padding: 8,
             backgroundColor: isDarkMode ? "#2B2B2B" : "#FFFFFF",
-            children: [label("Markdown editor"), note(detail), note("Preview opens in a popup from the toolbar")]
+            children: [label("Markdown Editor"), note(detail), note("Preview opens in a popup from the toolbar")]
         };
     }
     if (values.editorLayout === "stacked") {
@@ -227,8 +227,8 @@ export function getPreview(values: MarkdownEditorPreviewProps, isDarkMode: boole
 
 export function getCustomCaption(values: MarkdownEditorPreviewProps): string {
     if (values.mode === "edit") {
-        return values.markdownAttribute ? `Markdown editor: ${values.markdownAttribute}` : "Markdown editor";
+        return values.markdownAttribute ? `Markdown Editor: ${values.markdownAttribute}` : "Markdown Editor";
     }
     const expression = (values.content ?? "").trim();
-    return expression ? `Markdown: ${expression}` : "Markdown";
+    return expression ? `Markdown Editor: ${expression}` : "Markdown Editor";
 }

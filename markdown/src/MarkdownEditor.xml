@@ -3,7 +3,7 @@
         supportedPlatform="Web"
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Markdown</name>
+    <name>Markdown Editor</name>
     <description>Renders Markdown text as HTML using react-markdown, optionally with an editor and live preview.</description>
     <icon/>
     <properties>

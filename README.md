@@ -1,4 +1,4 @@
-# Markdown widget for Mendix
+# Markdown Editor widget for Mendix
 
 ![Markdown widget for Mendix](markdown/screenshots/cover.jpg)
 
@@ -81,7 +81,7 @@ Version 1.0.0 · Mendix Studio Pro 11.12.1 and higher · Web
    and copy it into your app's `widgets` folder, or in Studio Pro use
    **App Explorer > Import module package**.
 2. Press **F4** (Synchronize App Directory) to refresh the toolbox.
-3. The widget appears in the toolbox under **Add-ons** as **Markdown**.
+3. The widget appears in the toolbox under **Add-ons** as **Markdown Editor**.
 4. Drag it onto a page inside a data view or list view.
    - View mode: set **Markdown** to an expression such as `$currentObject/Body`.
    - Edit mode: pick a String attribute; the toolbar and Preview button appear.
